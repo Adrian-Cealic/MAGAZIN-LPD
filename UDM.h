@@ -1,0 +1,202 @@
+//---------------------------------------------------------------------------
+
+#ifndef UDMH
+#define UDMH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Data.DB.hpp>
+#include <FireDAC.Comp.Client.hpp>
+#include <FireDAC.Phys.hpp>
+#include <FireDAC.Phys.Intf.hpp>
+#include <FireDAC.Phys.MSSQL.hpp>
+#include <FireDAC.Phys.MSSQLDef.hpp>
+#include <FireDAC.Stan.Async.hpp>
+#include <FireDAC.Stan.Def.hpp>
+#include <FireDAC.Stan.Error.hpp>
+#include <FireDAC.Stan.Intf.hpp>
+#include <FireDAC.Stan.Option.hpp>
+#include <FireDAC.Stan.Pool.hpp>
+#include <FireDAC.UI.Intf.hpp>
+#include <FireDAC.VCLUI.Wait.hpp>
+#include <FireDAC.Comp.DataSet.hpp>
+#include <FireDAC.DApt.hpp>
+#include <FireDAC.DApt.Intf.hpp>
+#include <FireDAC.DatS.hpp>
+#include <FireDAC.Stan.Param.hpp>
+//---------------------------------------------------------------------------
+class TDM : public TDataModule
+{
+__published:	// IDE-managed Components
+	TFDConnection *BAZA;
+	TFDQuery *QAUTENTIFICARE;
+	TFDQuery *QLIBER;
+	TFDQuery *QUM;
+	TDataSource *DSQUM;
+	TFDQuery *QPRODUS;
+	TDataSource *DSQPRODUS;
+	TFDQuery *QEMITENT;
+	TDataSource *DSQEMITENT;
+	TFDQuery *QFACTURA;
+	TDataSource *DSQFACTURA;
+	TFDQuery *QDATEFACTURA;
+	TDataSource *DSQDATEFACTURA;
+	TFDAutoIncField *QAUTENTIFICAREFIRMA_ID;
+	TStringField *QAUTENTIFICARENUME;
+	TStringField *QAUTENTIFICARECOD_FISCAL;
+	TStringField *QAUTENTIFICAREADRESA;
+	TFDAutoIncField *QAUTENTIFICAREFIRMA_OPERATOR_ID;
+	TIntegerField *QAUTENTIFICAREFIRMA_ID_1;
+	TStringField *QAUTENTIFICARETIP_ACCES;
+	TIntegerField *QAUTENTIFICAREOPERATOR_ID;
+	TFDAutoIncField *QAUTENTIFICAREOPERATOR_ID_1;
+	TStringField *QAUTENTIFICARENUME_1;
+	TStringField *QAUTENTIFICAREPRENUME;
+	TStringField *QAUTENTIFICAREFUNCTIA;
+	TStringField *QAUTENTIFICAREUSERNAME;
+	TStringField *QAUTENTIFICAREPASS;
+	TStringField *QAUTENTIFICARECOD;
+	TIntegerField *QAUTENTIFICARETIP_ACCES_1;
+	TStringField *QAUTENTIFICAREFIRMA;
+	TStringField *QAUTENTIFICAREOPERATOR;
+	TStringField *QAUTENTIFICAREACCES;
+	TFDAutoIncField *QUMUNIT_MASURA_ID;
+	TStringField *QUMABREVIERE;
+	TStringField *QUMNUME;
+	TFDAutoIncField *QPRODUSPRODUSE_ID;
+	TStringField *QPRODUSDENUMIRE;
+	TStringField *QPRODUSCOD_PRODUS;
+	TFDAutoIncField *QEMITENTEMITENT_ID;
+	TStringField *QEMITENTDENUMIRE;
+	TStringField *QEMITENTIDNP;
+	TStringField *QEMITENTADRESA;
+	TStringField *QDATEFACTURAEMITENT;
+	TStringField *QDATEFACTURANR_FACTURA;
+	TDateField *QDATEFACTURADATA_FACTURA;
+	TIntegerField *QDATEFACTURANR_POZ;
+	TFMTBCDField *QDATEFACTURAPRET_INTRARE;
+	TFMTBCDField *QDATEFACTURAPRET_TVA;
+	TFMTBCDField *QDATEFACTURAPRET_TOT;
+	TStringField *QFACTURAOPERATOR;
+	TStringField *QFACTURAEMITENT;
+	TBCDField *QFACTURADIF;
+	TFMTBCDField *QFACTURAPROCENT_TVA;
+	TFDAutoIncField *QFACTURARECEPTIE_ID;
+	TIntegerField *QFACTURAPRODUSE_ID;
+	TIntegerField *QFACTURAUNIT_MASURA_ID;
+	TIntegerField *QFACTURAFACTURA_REC_ID;
+	TIntegerField *QFACTURAFIRMA_OPERATOR_ID;
+	TIntegerField *QFACTURASTOCK1;
+	TIntegerField *QFACTURASTOCK2;
+	TBCDField *QFACTURAPRET_INTRARE;
+	TBCDField *QFACTURAPRET_VANZ;
+	TIntegerField *QFACTURATVA;
+	TBooleanField *QFACTURAACTIV;
+	TFDAutoIncField *QFACTURAPRODUSE_ID_1;
+	TStringField *QFACTURADENUMIRE;
+	TStringField *QFACTURACOD_PRODUS;
+	TFDAutoIncField *QFACTURAUNIT_MASURA_ID_1;
+	TStringField *QFACTURAABREVIERE;
+	TStringField *QFACTURANUME;
+	TFDAutoIncField *QFACTURAFACTURA_REC_ID_1;
+	TStringField *QFACTURANR_FACTURA;
+	TDateField *QFACTURADATA_FACTURA;
+	TIntegerField *QFACTURAEMITENT_ID;
+	TStringField *QFACTURAEMITENT_1;
+	TFDAutoIncField *QFACTURAFIRMA_OPERATOR_ID_1;
+	TIntegerField *QFACTURAFIRMA_ID;
+	TStringField *QFACTURATIP_ACCES;
+	TIntegerField *QFACTURAOPERATOR_ID;
+	TFDAutoIncField *QFACTURAOPERATOR_ID_1;
+	TStringField *QFACTURANUME_1;
+	TStringField *QFACTURAPRENUME;
+	TStringField *QFACTURAFUNCTIA;
+	TStringField *QFACTURAUSERNAME;
+	TStringField *QFACTURAPASS;
+	TStringField *QFACTURACOD;
+	TIntegerField *QFACTURATIP_ACCES_1;
+	TFDAutoIncField *QFACTURAEMITENT_ID_1;
+	TStringField *QFACTURADENUMIRE_1;
+	TStringField *QFACTURAIDNP;
+	TStringField *QFACTURAADRESA;
+	TFDStoredProc *PFACTURA;
+	TFDStoredProc *PCEK;
+	TFDAutoIncField *QDATEFACTURAEMITENT_ID;
+	TFDQuery *QVANZARE;
+	TDataSource *DSQVANZARE;
+	TIntegerField *QVANZAREPROCENT;
+	TFDAutoIncField *QVANZARERECEPTIE_ID;
+	TIntegerField *QVANZAREPRODUSE_ID;
+	TIntegerField *QVANZAREUNIT_MASURA_ID;
+	TIntegerField *QVANZAREFACTURA_REC_ID;
+	TIntegerField *QVANZAREFIRMA_OPERATOR_ID;
+	TIntegerField *QVANZARESTOCK1;
+	TIntegerField *QVANZARESTOCK2;
+	TBCDField *QVANZAREPRET_INTRARE;
+	TBCDField *QVANZAREPRET_VANZ;
+	TIntegerField *QVANZARETVA;
+	TBooleanField *QVANZAREACTIV;
+	TFDAutoIncField *QVANZAREPRODUSE_ID_1;
+	TStringField *QVANZAREDENUMIRE;
+	TStringField *QVANZARECOD_PRODUS;
+	TFDAutoIncField *QVANZAREUNIT_MASURA_ID_1;
+	TStringField *QVANZAREABREVIERE;
+	TStringField *QVANZARENUME;
+	TFDAutoIncField *QVANZAREFACTURA_REC_ID_1;
+	TStringField *QVANZARENR_FACTURA;
+	TDateField *QVANZAREDATA_FACTURA;
+	TIntegerField *QVANZAREEMITENT_ID;
+	TStringField *QVANZAREEMITENT;
+	TFDAutoIncField *QVANZAREEMITENT_ID_1;
+	TStringField *QVANZAREDENUMIRE_1;
+	TStringField *QVANZAREIDNP;
+	TStringField *QVANZAREADRESA;
+	TFDAutoIncField *QVANZAREVANZARE_ID;
+	TIntegerField *QVANZARECEC_ID;
+	TIntegerField *QVANZARERECEPTIE_ID_1;
+	TIntegerField *QVANZARECANTITATEA;
+	TBCDField *QVANZARESUMA;
+	TBCDField *QVANZARESUMA_DISC;
+	TBCDField *QVANZARESUMA_TOTAL;
+	TFDAutoIncField *QVANZARECEC_ID_1;
+	TIntegerField *QVANZARECLIENT_ID;
+	TIntegerField *QVANZAREFIRMA_OPERATOR_ID_1;
+	TIntegerField *QVANZARENR_CEC;
+	TSQLTimeStampField *QVANZAREDATA_CEC;
+	TFloatField *QVANZARESUMA_CEC;
+	TIntegerField *QVANZARENR_POZ;
+	TFDAutoIncField *QVANZARECLIENT_ID_1;
+	TIntegerField *QVANZAREDISCOUNT_ID;
+	TStringField *QVANZARENUME_1;
+	TStringField *QVANZAREPRENUME;
+	TDateField *QVANZAREDATA_NAST;
+	TDateField *QVANZAREDATA_REG;
+	TStringField *QVANZARECOD_CLIENT;
+	TFDAutoIncField *QVANZAREDISCOUNT_ID_1;
+	TStringField *QVANZARENUME_2;
+	TIntegerField *QVANZAREVALOAREA;
+	TBooleanField *QVANZAREACTIV_1;
+	TFDAutoIncField *QVANZAREFIRMA_OPERATOR_ID_2;
+	TIntegerField *QVANZAREFIRMA_ID;
+	TStringField *QVANZARETIP_ACCES;
+	TIntegerField *QVANZAREOPERATOR_ID;
+	TFDAutoIncField *QVANZAREOPERATOR_ID_1;
+	TStringField *QVANZARENUME_3;
+	TStringField *QVANZAREPRENUME_1;
+	TStringField *QVANZAREFUNCTIA;
+	TStringField *QVANZAREUSERNAME;
+	TStringField *QVANZAREPASS;
+	TStringField *QVANZARECOD;
+	TIntegerField *QVANZARETIP_ACCES_1;
+	TFMTBCDField *QVANZARESUMMA;
+	TStringField *QVANZARECLIENT;
+	TStringField *QVANZAREOPERATOR;
+	TFDQuery *QDateCec;
+	TDataSource *DSDateCec;
+private:	// User declarations
+public:		// User declarations
+	__fastcall TDM(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TDM *DM;
+//---------------------------------------------------------------------------
+#endif

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.309,D:\MAGAZIN LPS\MAGAZIN LPD\URECEPTIE.dfm=D:\MAGAZIN LPS\MAGAZIN LPD\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.094,D:\MAGAZIN LPS\MAGAZIN LPD\UDM.h=D:\MAGAZIN LPS\MAGAZIN LPD\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.896,C:\Users\Derevlenco_V\Desktop\MAGAZIN LPD\Unit3.dfm=C:\Users\Derevlenco_V\Desktop\MAGAZIN LPD\UMAIN.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.570,C:\Users\Derevlenco_V\Documents\Embarcadero\Studio\Projects\Unit3.dfm=C:\Users\Derevlenco_V\Desktop\MAGAZIN LPD\Unit3.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.094,D:\MAGAZIN LPS\MAGAZIN LPD\UDM.dfm=D:\MAGAZIN LPS\MAGAZIN LPD\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.570,C:\Users\Derevlenco_V\Documents\Embarcadero\Studio\Projects\Unit3.h=C:\Users\Derevlenco_V\Desktop\MAGAZIN LPD\Unit3.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.720,=C:\Users\Derevlenco_V\Documents\Embarcadero\Studio\Projects\Unit3.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.570,C:\Users\Derevlenco_V\Documents\Embarcadero\Studio\Projects\Unit3.cpp=C:\Users\Derevlenco_V\Desktop\MAGAZIN LPD\Unit3.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.845,C:\Users\Derevlenco_V\Desktop\MAGAZIN LPD\MAGAZIN.cbproj=C:\Users\Derevlenco_V\Desktop\MAGAZIN LPD\MAGAZIN.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.094,D:\MAGAZIN LPS\MAGAZIN LPD\UDM.cpp=D:\MAGAZIN LPS\MAGAZIN LPD\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.896,C:\Users\Derevlenco_V\Desktop\MAGAZIN LPD\Unit3.h=C:\Users\Derevlenco_V\Desktop\MAGAZIN LPD\UMAIN.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.306,D:\MAGAZIN LPS\MAGAZIN LPD\UAUTENTIFICARE.cpp=D:\MAGAZIN LPS\MAGAZIN LPD\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.704,=C:\Users\Derevlenco_V\Documents\Embarcadero\Studio\Projects\Project3PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.306,D:\MAGAZIN LPS\MAGAZIN LPD\UAUTENTIFICARE.dfm=D:\MAGAZIN LPS\MAGAZIN LPD\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.896,C:\Users\Derevlenco_V\Desktop\MAGAZIN LPD\Unit3.cpp=C:\Users\Derevlenco_V\Desktop\MAGAZIN LPD\UMAIN.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.601,C:\Users\Derevlenco_V\Documents\Embarcadero\Studio\Projects\Project3.cbproj=C:\Users\Derevlenco_V\Desktop\MAGAZIN LPD\MAGAZIN.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.306,D:\MAGAZIN LPS\MAGAZIN LPD\UAUTENTIFICARE.h=D:\MAGAZIN LPS\MAGAZIN LPD\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.555,C:\Users\Derevlenco_V\Documents\Embarcadero\Studio\Projects\Project3PCH1.h=C:\Users\Derevlenco_V\Desktop\MAGAZIN LPD\MAGAZINPCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.744,=D:\MAGAZIN LPS\MAGAZIN LPD\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.309,D:\MAGAZIN LPS\MAGAZIN LPD\URECEPTIE.h=D:\MAGAZIN LPS\MAGAZIN LPD\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.309,D:\MAGAZIN LPS\MAGAZIN LPD\URECEPTIE.cpp=D:\MAGAZIN LPS\MAGAZIN LPD\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.385,=D:\MAGAZIN LPS\MAGAZIN LPD\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.638,=D:\MAGAZIN LPS\MAGAZIN LPD\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.108,=D:\MAGAZIN LPS\MAGAZIN LPD\Unit1.cpp</Transaction>
+  </Transactions>
+</BorlandProject>
